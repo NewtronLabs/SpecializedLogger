@@ -44,16 +44,16 @@ SLog.v("Test", logMsg, tr);
 **Encrpted Logging**
 
 ```
+// Example Cipher and Key.
 DESKeySpec keySpec = new DESKeySpec("Your secret Key phrase".getBytes("UTF8"));
 SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
-SecretKey key = keyFactory.generateSecret(keySpec);
-
+SecretKey key = keyFactory.generateSecret(keySpec);\
 Cipher cipher;
 cipher = Cipher.getInstance("DES");
 
 // Switch To Secure Logger
 SLog.setLogger(new SecureLogger(cipher, key));
-SLog.v("Test", logMsg, tr);
+SLog.v("Test", "This is now encrypted!");
 ```
 
 ---
