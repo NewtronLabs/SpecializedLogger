@@ -1,4 +1,4 @@
-#Specialized Logger
+# Specialized Logger
 
 Encrypted logging made great again.
 
@@ -14,7 +14,7 @@ The library is intended for logging purposes.
 
 Include the below dependencies in your `build.gradle` project.
 
-```
+```gradle
 allprojects {
     repositories {
         jcenter()
@@ -25,7 +25,7 @@ allprojects {
 
 In the `build.gradle` for your app.
 
-```
+```gradle
 compile 'com.newtronlabs.specializedlogger:specializedlogger:1.0.0'
 ```
 
@@ -34,7 +34,7 @@ compile 'com.newtronlabs.specializedlogger:specializedlogger:1.0.0'
 
 **Simple Logging**
 
-```
+```java
 Slog.d("Test", logMsg);
 
 Throwable tr = new NullPointerException("Testing a null pointer exception!");
@@ -43,7 +43,7 @@ SLog.v("Test", logMsg, tr);
 
 **Encrpted Logging**
 
-```
+```java
 // Example Cipher and Key.
 DESKeySpec keySpec = new DESKeySpec("Your secret Key phrase".getBytes("UTF8"));
 SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
