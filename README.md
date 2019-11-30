@@ -51,7 +51,7 @@ dependencies {
 **Simple Logging**
 
 ```java
-Slog.d("Test", logMsg);
+SLog.d("Test", logMsg);
 
 Throwable tr = new NullPointerException("Testing a null pointer exception!");
 SLog.v("Test", logMsg, tr);
